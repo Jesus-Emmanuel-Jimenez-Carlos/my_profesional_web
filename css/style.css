@@ -2,8 +2,8 @@
     --bg-dark: #002c5c; /* Un Azul Rey profundo y elegante pero más brillante que el anterior */
     --text-main: #ffffff; /* Blanco puro para máximo contraste */
     --text-muted: #d0e4ff; /* Blanco con un sutil azul claro para lectura suave */
-    --accent: #38bdf8; /* Azul cyan para botones y detalles que llamen la atención */
-    --accent-hover: #0ea5e9;
+    --accent: #a3e635; /* Verde Limón brillante para botones interactivos */
+    --accent-hover: #84cc16; /* Verde Limón oscuro para efecto deslizamiento */
     --card-bg: rgba(0, 60, 118, 0.6); /* Cajas ligeramente más claras que el fondo */
     --nav-bg: rgba(0, 44, 92, 0.9);
     --border-color: rgba(255, 255, 255, 0.15);

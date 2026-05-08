@@ -3,11 +3,9 @@ const certificados = [
     { name: "Microsoft SC-900", file: "Ceritificado Microsoft SC-900.pdf", type: "pdf" },
     { name: "Microsoft AZ-900 (Azure Fundamentals)", file: "Certificado Microsoft AZ-900_AzureFundamentals.pdf", type: "pdf" },
     { name: "Microsoft MS-900", file: "Certificado Microsoft MS-900.pdf", type: "pdf" },
-    { name: "Microsoft SC-900 (Imagen)", file: "Certificado Microsoft_SC900.jpeg", type: "image" },
     { name: "Guía de Inicio YouTube", file: "Certificado_Guia_YouTube.pdf", type: "pdf" },
     { name: "Full Stack BigSchool", file: "Certificado-Jesus-Emmanuel-Jimenez-Carlos-BigSchool.pdf", type: "pdf" },
     { name: "ICEMéxico Método 566", file: "Constancia_Metodo566.pdf", type: "pdf" },
-    { name: "LinkedIn Full Stack", file: "Linkedin_Certificado_Fundamentos_Desarrollo web Full Stack.pdf", type: "pdf" },
     { name: "LinkedIn Full Stack / Frontend", file: "Linkedin_CertificadoDeFinalizacion_Fundamentos del desarrollo web Full Stack o Frontend.pdf", type: "pdf" }
 ];
 

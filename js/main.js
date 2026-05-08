@@ -8,8 +8,7 @@ const certificados = [
     { name: "Full Stack BigSchool", file: "Certificado-Jesus-Emmanuel-Jimenez-Carlos-BigSchool.pdf", type: "pdf" },
     { name: "ICEMéxico Método 566", file: "Constancia_Metodo566.pdf", type: "pdf" },
     { name: "LinkedIn Full Stack", file: "Linkedin_Certificado_Fundamentos_Desarrollo web Full Stack.pdf", type: "pdf" },
-    { name: "LinkedIn Full Stack / Frontend", file: "Linkedin_CertificadoDeFinalizacion_Fundamentos del desarrollo web Full Stack o Frontend.pdf", type: "pdf" },
-    { name: "Constancia Jesús Jiménez - Método 566", file: "Constancia_Jesus_Metodo566.pdf", type: "pdf" }
+    { name: "LinkedIn Full Stack / Frontend", file: "Linkedin_CertificadoDeFinalizacion_Fundamentos del desarrollo web Full Stack o Frontend.pdf", type: "pdf" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

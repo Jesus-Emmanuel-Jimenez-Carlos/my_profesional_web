@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo del Blog Técnico | Jesús Emmanuel Jiménez Carlos</title>
+    <meta name="description" content="Caso de estudio: Migración exitosa de procesos con Bash y Python a entornos de nube.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar scrolled">
+        <div class="logo">JEJC<span>.</span></div>
+        <nav class="nav-links">
+            <a href="index.html#blog" style="display:flex; align-items:center; gap:0.5rem;"><i class='bx bx-arrow-back'></i> Volver al Blog</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section-padding" style="margin-top: 60px;">
+        <div class="container article-container glass-panel" style="max-width:800px; padding:4rem; margin:0 auto;">
+            
+            <span style="color:var(--accent); font-weight:600; font-size:1rem; text-transform: uppercase; letter-spacing: 1px;">Caso de Estudio #01</span>
+            
+            <h1 style="font-size:3rem; margin-bottom:2rem; line-height:1.2; margin-top: 1rem;">Migración exitosa de procesos Legacy: Automatización a nivel de núcleo en servidores Linux</h1>
+            
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color:var(--accent); margin-bottom:1rem; font-size:1.8rem; display:flex; align-items:center; gap:0.5rem;"><i class='bx bx-book-open'></i> El Caso Real</h2>
+                <p style="color:var(--text-muted); font-size:1.15rem; line-height:1.8; margin-bottom:1.5rem;">
+                    Imagínate la escena (al más puro estilo de un guion de Pixar): Era viernes por la tarde, los sistemas de contingencia estaban exhaustos en una de nuestras filiales más grandes y no había margen de error. El problema principal radicaba en que los servidores <em>on-premise</em> dependían de rutinas obsoletas que sofocaban la red institucional y elevaban los cuellos de botella.
+                </p>
+                <p style="color:var(--text-muted); font-size:1.15rem; line-height:1.8;">
+                    Teníamos un requerimiento crítico directo de dirección: diseñar e implementar un refactor arquitectónico en menos de 24 horas usando solo herramientas nativas de Bash y Python. Nuestro objetivo era orquestar los procesos y lograr integrarlos fluidamente con nuestra infraestructura Cloud de Azure para respaldos resilientes.
+                </p>
+            </section>
+
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color:var(--accent); margin-bottom:1rem; font-size:1.8rem; display:flex; align-items:center; gap:0.5rem;"><i class='bx bx-code-alt'></i> Solución Tecnológica</h2>
+                <p style="color:var(--text-muted); font-size:1.15rem; line-height:1.8; margin-bottom:1.5rem;">
+                    El enfoque se basó en reducir la carga procesal del sistema local. Diseñé un daemon en Linux que detectara las horas valle del servidor y enviara volcados estructurados de logs directamente a los buckets mediante un script híbrido automatizado.
+                </p>
+                
+                <!-- Code Block Area -->
+                <div style="position: relative; margin-top: 2rem;">
+                    <span style="position:absolute; top:-12px; left:20px; background:var(--accent); color:var(--bg-dark); padding:2px 10px; border-radius:10px; font-size:0.8rem; font-weight:800;">BASH SCRIPT</span>
+                    <pre style="background:#0b1120; padding:2.5rem 1.5rem 1.5rem 1.5rem; border-radius:1rem; overflow-x:auto; border:1px solid var(--border-color); color:#a5b4fc; font-family: 'Courier New', Courier, monospace; font-size: 0.95rem; line-height: 1.5;"><code class="language-bash">#!/bin/bash
+# Script de automatización de volcados para infraestructura Cloud
+
+echo "[INFO] Iniciando proceso de optimización hibrido..."
+TAR_FILE="/tmp/logs_backup_$(date +%F).tar.gz"
+
+# Compresión segura descartando metadata inútil
+tar -czvf $TAR_FILE /var/log/legacy-app/ --exclude="*.tmp"
+
+if [ $? -eq 0 ]; then
+    echo "[SUCCESS] Compresión local lista. Llamando al orquestador en Python..."
+    # Ejecutamos conector seguro hacia la bóveda en Azure
+    python3 /opt/scripts/azure_uploader.py --file=$TAR_FILE --compress=max
+    
+    if [ $? -eq 0 ]; then
+        echo "[SUCCESS] Sincronización a Azure Cloud completada."
+        rm -f $TAR_FILE
+    else
+        echo "[ERROR] El uploader de la nube ha fallado." >&2
+    fi
+else
+    echo "[CRITICAL ERROR] Falla en la compresión del log. Proceso abortado." >&2
+    exit 1
+fi</code></pre>
+                </div>
+            </section>
+            
+            <!-- Call To Action -->
+            <section style="margin-top: 4rem; padding-top:2rem; border-top:1px solid var(--border-color);">
+                <div style="background:var(--nav-bg); padding:3rem; border-radius:1rem; text-align:center; border: 1px solid rgba(56, 189, 248, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <i class='bx bx-rocket' style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom:1rem; font-size:1.8rem;">Haz escalar tu negocio con optimización y seguridad de nivel experto</h3>
+                    <p style="color:var(--text-muted); margin-bottom:2rem; font-size: 1.1rem; max-width: 500px; margin-left: auto; margin-right: auto;">¿Necesitas optimizar tu infraestructura IT corporativa, mitigar fallas o automatizar tus embudos de sistemas más críticos?</p>
+                    <a href="https://mx.linkedin.com/in/jes%C3%BAs-emmanuel-jim%C3%A9nez-carlos-isc" target="_blank" class="btn btn-primary" style="text-decoration:none; font-size: 1.1rem; padding: 1rem 2.5rem;">Contáctame Hoy Mismo</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: auto;">
+        <div class="container">
+            <p>&copy; 2026 Jesús Emmanuel Jiménez Carlos | Consultoría IT y Ciberseguridad.</p>
+        </div>
+    </footer>
+</body>
+</html>

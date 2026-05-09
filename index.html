@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Boxicons (For quick modern icons) -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- LinkedIn Badge Script -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <!-- LinkedIn Script removed as we use static custom badge for better UX -->
 </head>
 <body>
     <!-- Navbar -->
@@ -69,10 +68,15 @@
                     <p>Me especializo en la <strong>Automatización de infraestructura IT</strong> utilizando tecnologías como Bash y Python. Busco crear aplicaciones rápidas, resilientes y eficientes en la nube, nivel respaldado por mis capacidades y mi <strong>Certificado Microsoft Azure</strong>.</p>
                     <p>Conecta conmigo a través de mi perfil de LinkedIn para conocer más de mi trayectoria y conectar profesionalmente.</p>
                 </div>
-                <!-- Light theme container for LinkedIn Badge so its text is readable -->
-                <div class="linkedin-container">
-                    <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="jesús-emmanuel-jiménez-carlos-isc" data-version="v1">
-                      <a class="badge-base__link LI-simple-link" href="https://mx.linkedin.com/in/jes%C3%BAs-emmanuel-jim%C3%A9nez-carlos-isc?trk=profile-badge">Jesús Emmanuel Jiménez Carlos</a>
+                <!-- Custom Static LinkedIn Badge (Prevents AdBlocker/Script errors) -->
+                <div class="linkedin-container" style="background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 1.5rem; display: flex; align-items: center; gap: 1.5rem; max-width: 450px; margin: 0 auto; border: 1px solid #e0e0e0;">
+                    <img src="./assets/profile.jpeg" alt="Jesús Emmanuel" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid #0a66c2;">
+                    <div style="text-align: left;">
+                        <h3 style="color: #000; font-size: 1.2rem; margin-bottom: 0.25rem; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600;">Jesús Emmanuel Jiménez Carlos</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.75rem; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Ingeniero en Sistemas Computacionales | Full Stack Developer | IT Consultant</p>
+                        <a href="https://mx.linkedin.com/in/jes%C3%BAs-emmanuel-jim%C3%A9nez-carlos-isc?trk=profile-badge" target="_blank" style="display: inline-flex; align-items: center; gap: 0.3rem; background: #0a66c2; color: white; padding: 0.4rem 1rem; border-radius: 1.5rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: background 0.3s;" onmouseover="this.style.background='#004182';" onmouseout="this.style.background='#0a66c2';">
+                            <i class='bx bxl-linkedin-square' style="font-size: 1.2rem;"></i> Ver perfil
+                        </a>
                     </div>
                 </div>
             </div>
